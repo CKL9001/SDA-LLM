@@ -1,0 +1,6 @@
+﻿Question,First Dialogue Turn,Object Count (1st Turn),Second Dialogue Turn,Object Count (2dn Turn),Third Dialogue Turn,Object Count (3rd Turn),Fourth Dialogue Turn,Object Count (4th Turn)
+Question 1,"I’m done eating, can you please find the tray return area, it has the signs locating it",1,,,,,,
+Question 2,Can you turn on the TV for me?,2,The one that is under the clock please,1,,,,
+Question 3,Please go to the recycling bin.,5,"Actually, I'm referring to the bin closest to the door.",3,I think the blue recycling bin would be best for sorting waste.,1,,
+Question 4,Can you check the lights for me?,25,A dome-shaped light is what I’m looking for,15,The dome light isn’t on,3,"Hmm, I’m looking for the one in front of the food lines",1
+Question 5,I need a fork can you grab one for me? The green containers hold them,1,,,,,,

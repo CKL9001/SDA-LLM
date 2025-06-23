@@ -1,0 +1,6 @@
+﻿Question,First Dialogue Turn,Object Count (1st Turn),Second Dialogue Turn,Object Count (2dn Turn),Third Dialogue Turn,Object Count (3rd Turn)
+Question 1,Please go to the chair,150,"Hm, I mean a high chair",25,I think the high chair I need is left of the door and closest to it,1
+Question 2,"I need to throw away my trash, so can you locate a trash can set",15,Instead can you help me throw away my trash in the can nearest the TV?,3,The landfill can is where the trash should go,1
+Question 3,In case of a fire can you locate the fire extinguishers,2,"During a fire you would get the closer extinguisher, please locate it",1,,
+Question 4,"My hands feel so dirty, please find a hand sanitizer dispenser",2,"For convenience, show me the one that is the closest to me",1,,
+Question 5,"I heard you pay for lunch on an iPad machine, do you know where it is?",1,,,,

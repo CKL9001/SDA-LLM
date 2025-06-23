@@ -1,0 +1,6 @@
+﻿Question,First Dialogue Turn,Object Count (1st Turn),Second Dialogue Turn,Object Count (2dn Turn),Third Dialogue Turn,Object Count (3rd Turn)
+Question 1,"My food is a little bland, can you get me a sauce?",10,"Hm, I think ketchup will taste the best with my food",1,,
+Question 2,Can you check for a poster on the wall?,10,"Actually, I’m looking for the one about recycling.",3,The poster next to the blue wall by the door is what I need.,1
+Question 3,Go to the TV please,3,The one above the food station,2,"Hm, the one I want is the left TV",1
+Question 4,I need utensils to eat,2,Grab me a pair of chopsticks please,1,,
+Question 5,"I’m really hungry, can you get me a table",30,Hm. how a circular one,10,I want one closest to the food line so I can grab food quickly,1

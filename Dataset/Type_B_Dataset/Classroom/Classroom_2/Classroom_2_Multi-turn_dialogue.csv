@@ -1,0 +1,6 @@
+﻿Question,First Dialogue Turn,Object Count (1st Turn),Second Dialogue Turn,Object Count (2dn Turn),Third Dialogue Turn,Object Count (3rd Turn),Fourth Dialogue Turn,Object Count (4th Turn)
+Question 1,Locate the exits in case of an emergency,3,I think the safest exit would be the one nearest the food lines,1,,,,
+Question 2,Can you find an empty table?,25,Look for a round table specifically.,10,The round table nearest to the window would be best.,6,The one nearest the trashcan for convenience,1
+Question 3,Can you go to one of the tables?,30,I need you to choose a round table.,10,The high table next to the pillar would be best.,1,,
+Question 4,Can you grab a napkin?,30,From the dispenser on the table nearest the food lines please,1,,,,
+Question 5,"I want my food to be more salty, please get a salt shaker for me",30,"Hm, how about the one nearest to you",1,,,,
