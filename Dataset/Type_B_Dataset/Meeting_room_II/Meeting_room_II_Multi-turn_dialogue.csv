@@ -1,0 +1,7 @@
+﻿Question,First Dialogue Turn,Object Count (1st Turn),Second Dialogue Turn,Object Count (2dn Turn),Third Dialogue Turn,Object Count (3rd Turn),Fourth Dialogue Turn,Object Count (4th Turn),,,,
+Question 1,Go to the chair,30,"Hmm, the chair in front of the teacher’s desk",2,The chair nearest the students,1,,,,,,
+Question 2,Go to the chair,30,It’s a swivel chair,3,"Mm, the chair is near the cardboard boxes",2,The red one is the one I want,1,,,,
+Question 3,Go get the pencil box please,4,The pencil box is inside the blue cardboard box,4,The pencil box I’m looking for is clear,1,,,,,,
+Question 4,Go to the whiteboard eraser,8,The one in front of the board with writing on it,3,"Hmm, I want the one between the other erasers",1,,,,,,
+Question 5,Please get me my book,75,My book is the one on the desk,2,My book is the one closer to the teacher’s desk,1,,,,,,
+,,,,,,,,,,,,
