@@ -1,0 +1,6 @@
+﻿Question,First Dialogue Turn,Object Count (1st Turn),Second Dialogue Turn,Object Count (2dn Turn),Third Dialogue Turn,Object Count (3rd Turn)
+Question 1,Can you go to the shade to close them,3,The middle one is the one I want to close,1,,
+Question 2,Go to the screen to turn it on,3,"Hm, I want to turn on the large TV on the wall",2,The one I want is the one on the left,1
+Question 3,"I want to drink coffee, please get me a cup",20,"Since coffee is hot, get a paper cup",10,The one on top of the stack is fine,1
+Question 4,"Oops, I spilled something, can you get something that I can wipe with?",3,"Since, the spill is sticky, a wet wipe is preferred",2,Please grab the lemon-scented yellow ones,1
+Question 5,"Hmm, I think I wrote this wrong, can you grab a whiteboard eraser please?",2,The one on the table would do just fine,1,,

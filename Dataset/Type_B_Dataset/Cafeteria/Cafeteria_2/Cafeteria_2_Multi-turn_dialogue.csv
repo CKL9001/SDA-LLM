@@ -1,0 +1,6 @@
+﻿Question,First Dialogue Turn,Object Count (1st Turn),Second Dialogue Turn,Object Count (2dn Turn),Third Dialogue Turn,Object Count (3rd Turn)
+Question 1,I need a whiteboard marker to write on the board,4,The one I want is on the tray on the whiteboard,2,The one I want is closest to the TV,1
+Question 2,I’m so thirsty can you get me a Crystal Geyser bottle of water?,8,My bottle is on the steel cabinet,4,It’s the one touching the wall,1
+Question 3,"I left something on a desk, can you go there?",3,The desk I’m talking about has a ring light on it,1,,
+Question 4,"My computer is almost dead, can you find me an outlet?",6,One near a free desk would be nice,1,,
+Question 5,"I’m hungry, please get something that can hold my food",5,The bowl would be nice,1,,
