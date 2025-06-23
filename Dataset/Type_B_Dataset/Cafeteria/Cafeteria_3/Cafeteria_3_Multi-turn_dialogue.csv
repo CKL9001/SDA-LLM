@@ -1,0 +1,6 @@
+﻿Question,First Dialogue Turn,Object Count (1st Turn),Second Dialogue Turn,Object Count (2dn Turn),Third Dialogue Turn,Object Count (3rd Turn)
+Question 1,I need to scan a QR code,3,The one on the left TV would do great!,1,,
+Question 2,I need to clean my hands please find me hand sanitizer,1,,,,
+Question 3,"I lost my mouse, can you get me another one",1,,,,
+Question 4,Go to the chair,10,It’s at the center table,8,The chair is the one nearest to the door,1
+Question 5,Can you grab the black circular device on the table,2,Please get the one closer to the tablet,1,,
