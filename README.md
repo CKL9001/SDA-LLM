@@ -25,4 +25,4 @@ To the best of our knowledge, this is the **first work to leverage foundation mo
 We warmly invite you to explore our paper, code, and approach.  
 Your feedback and collaboration are most welcome!
 
-📄 Please view the [full paper](https://arxiv.org/abs/2410.12802).
+📄 Please view the [full paper](https://arxiv.org/abs/2410.12802) and [video](https://www.youtube.com/watch?v=_CxhU5LAYLw).
