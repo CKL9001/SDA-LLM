@@ -1,0 +1,16 @@
+﻿Question,Ground Truth,First Dialogue Turn,Second Dialogue Turn,Third Dialogue Turn,Fourth Dialogue Turn,Fifth Dialogue Turn
+Question 1,chair 1,Help me find the chair closest to the glass wall.,,,,
+Question 2,chair 2,Help me find the chair with the desk lamp on the table.,"Help me find the chair with the desk lamp on the table, the one on the right.",,,
+Question 3,chair 3,Help me find the chair with the white water bottle on the table.,,,,
+Question 4,chair 4,Help me find the chair with the books on the table.,"Help me find the chair with the books on the table, where there is a water bottle to the left of the books.","Help me find the chair with the books on the table, where there is a water bottle to the left of the books and an umbrella to the right of the books.",,
+Question 5,chair 5,Help me find the chair with an umbrella on the table.,Help me find the chair to the right of the umbrella.,,,
+Question 6,chair 6,Help me find the chair with the fire extinguisher on the table.,,,,
+Question 7,chair 7,Help me find the chair with the paint bucket on the table.,"Help me find the chair with the paint bucket on the table, with a recessed wall behind it.","Help me find the chair with the paint bucket on the table, with a recessed wall behind it and a backpack in front of it.","Help me find the chair with the paint bucket on the table, with a recessed wall behind it, a backpack in front of it, and positioned between two windows.","Help me find the chair with the paint bucket on the table, with a recessed wall behind it, a backpack in front of it, positioned between two windows, and with a safety helmet on the right side."
+Question 8,chair 8,Help me find the chair with the safety helmet on the table.,,,,
+Question 9,chair 9,Help me find the chair with the laptop on the table.,,,,
+Question 10,chair 10,Help me find the chair with many cardboard boxes on the table.,"Help me find the chair with many cardboard boxes on the table, the one on the left.",,,
+Question 11,chair 11,Help me find the chair with many cardboard boxes on the table.,"Help me find the chair with many cardboard boxes on the table, the one on the right.",,,
+Question 12,whiteboard 1,Help me find the whiteboard with a heart next to it.,,,,
+Question 13,whiteboard 2,Help me find the whiteboard with writing on it.,,,,
+Question 14,whiteboard 3,Help me find the whiteboard next to the whiteboard with writing on it.,,,,
+Question 15,whiteboard 4,Help me find the whiteboard next to the cable.,,,,
