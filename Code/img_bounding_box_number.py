@@ -1,0 +1,121 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "0: 640x640 1 table, 6 chairs, 1 whiteboard, 7.0ms\n",
+      "Speed: 4.0ms preprocess, 7.0ms inference, 2.0ms postprocess per image at shape (1, 3, 640, 640)\n",
+      "\n",
+      "0: 640x640 1 cabinet, 1 teatable, 1 door, 1 table, 4 chairs, 7.0ms\n",
+      "Speed: 3.5ms preprocess, 7.0ms inference, 1.0ms postprocess per image at shape (1, 3, 640, 640)\n",
+      "\n",
+      "0: 640x640 1 coach, 6.0ms\n",
+      "Speed: 4.0ms preprocess, 6.0ms inference, 2.0ms postprocess per image at shape (1, 3, 640, 640)\n",
+      "\n",
+      "0: 640x640 (no detections), 6.0ms\n",
+      "Speed: 3.0ms preprocess, 6.0ms inference, 1.0ms postprocess per image at shape (1, 3, 640, 640)\n",
+      "\n",
+      "0: 640x640 1 person, 7.0ms\n",
+      "Speed: 4.0ms preprocess, 7.0ms inference, 1.0ms postprocess per image at shape (1, 3, 640, 640)\n",
+      "\n",
+      "0: 640x640 (no detections), 7.0ms\n",
+      "Speed: 3.0ms preprocess, 7.0ms inference, 1.0ms postprocess per image at shape (1, 3, 640, 640)\n",
+      "\n",
+      "0: 640x640 1 window, 8.0ms\n",
+      "Speed: 4.0ms preprocess, 8.0ms inference, 2.1ms postprocess per image at shape (1, 3, 640, 640)\n",
+      "\n",
+      "0: 640x640 (no detections), 7.0ms\n",
+      "Speed: 3.0ms preprocess, 7.0ms inference, 0.0ms postprocess per image at shape (1, 3, 640, 640)\n"
+     ]
+    }
+   ],
+   "source": [
+    "import cv2\n",
+    "import numpy as np\n",
+    "from ultralytics import YOLO\n",
+    "from PIL import Image\n",
+    "\n",
+    "def process_image(image_path, model, labels, object_count):\n",
+    "    frame = Image.open(image_path)\n",
+    "    frame = np.array(frame)\n",
+    "    frame = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)\n",
+    "    frame_x = frame.shape[1]\n",
+    "    frame_y = frame.shape[0]\n",
+    "    midrange = 100\n",
+    "\n",
+    "    results = model(frame)\n",
+    "    for i, result in enumerate(results):\n",
+    "        boxes = result.boxes\n",
+    "        for j, box in enumerate(boxes):\n",
+    "            class_id = box.cls.item()\n",
+    "            class_idint = int(class_id)\n",
+    "            xyxy = box.xyxy.cpu().numpy()[0]\n",
+    "            xmin, ymin, xmax, ymax = int(xyxy[0]), int(xyxy[1]), int(xyxy[2]), int(xyxy[3])\n",
+    "            ymid = int((ymin + ymax) / 2)\n",
+    "            ymidd = int((ymid + ymin) / 2)\n",
+    "            object_count[class_idint] += 1\n",
+    "            label_text = f\"{labels[class_idint]} {object_count[class_idint]}\"\n",
+    "\n",
+    "            color = get_color(class_idint)\n",
+    "            cv2.rectangle(frame, (xmin, ymin), (xmax, ymax), color, 2)\n",
+    "            cv2.putText(frame, label_text, (xmin, ymidd), cv2.FONT_HERSHEY_SIMPLEX, 1, color, 2)\n",
+    "\n",
+    "    PIL_image = Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))\n",
+    "    output_path = image_path.replace(\".jpg\", \"_new.jpg\")\n",
+    "    PIL_image.save(output_path)\n",
+    "\n",
+    "def get_color(class_idint):\n",
+    "    colors = {\n",
+    "        0: (255, 0, 0),    # cabinet\n",
+    "        1: (0, 255, 0),    # coach\n",
+    "        2: (0, 0, 255),    # teatable\n",
+    "        3: (255, 255, 0),  # door\n",
+    "        4: (255, 0, 255),  # person\n",
+    "        5: (0, 255, 255),  # table\n",
+    "        6: (255, 255, 255),# chair\n",
+    "        7: (0, 0, 0)       # whiteboard\n",
+    "    }\n",
+    "    return colors.get(class_idint, (128, 128, 128))  # default to gray if not found\n",
+    "\n",
+    "def process_images(image_paths, model, labels):\n",
+    "    object_count = {i: 0 for i in range(len(labels))}\n",
+    "    for image_path in image_paths:\n",
+    "        process_image(image_path, model, labels, object_count)\n",
+    "\n",
+    "if __name__ == \"__main__\":\n",
+    "    model = YOLO(\"C:/Users/USER/Desktop/研/模組課(下)/ROSLLMdataset/runs/detect/train/weights/best.pt\")\n",
+    "    labels = [\"cabinet\",\"coach\",\"teatable\",\"door\",\"person\",\"table\",\"chair\",\"whiteboard\",\"window\"]\n",
+    "    image_paths = [\"C:/Users/USER/Desktop/1.jpg\", \"C:/Users/USER/Desktop/2.jpg\", \"C:/Users/USER/Desktop/3.jpg\", \"C:/Users/USER/Desktop/4.jpg\", \"C:/Users/USER/Desktop/5.jpg\", \"C:/Users/USER/Desktop/6.jpg\", \"C:/Users/USER/Desktop/7.jpg\", \"C:/Users/USER/Desktop/8.jpg\"]\n",
+    "    process_images(image_paths, model, labels)\n"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "kl",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.13"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
